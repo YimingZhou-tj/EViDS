@@ -1,4 +1,4 @@
-# Independent EVIDS test sensor manager.
+# EViDS sensor callback managers.
 
 import numpy as np
 import os
