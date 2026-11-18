@@ -2,8 +2,7 @@
 
 **EViDS: An Environment-Vehicle Dynamics Integrated Simulation Platform for Intelligent Chassis Development**
 
-[English](#english) | [中文](#中文)
-
+[English](#english) | [中文](#中文) | [Paper (arXiv)](https://arxiv.org/abs/2611.17660) | [PDF](https://arxiv.org/pdf/2611.17660)
 ## English
 
 ### Overview
@@ -18,6 +17,12 @@ Main features:
 - Unified prop registration with configurable friction and height responses; ordinary roads use `Mu = 1`.
 - Adaptive ray queries: 10 Hz away from props and 100 Hz near props, with speed-based look-ahead and exit hysteresis.
 - Optional semantic, depth, stereo RGB, and LiDAR interfaces, disabled by default.
+
+- ![Town03 double lane change with synchronized CarSim tire-force plots](docs/images/evids-town03-video-plot.gif)
+
+*Town03 double lane change in CARLA, with synchronized front-wheel vertical loads and lateral forces from CarSim.*
+
+*CARLA Town03 双移线场景，右侧同步显示 CarSim 计算的左右前轮垂向载荷与侧向力。*
 
 ### Requirements
 
@@ -112,21 +117,25 @@ Road height away from props is also sampled at 10 Hz. Reduce `FarRaycastDt` when
 
 Each run saves files under `results/<timestamp>/`, including raw MAT data, wheel-feedback CSV and PNG files, a numerical summary, vehicle-spawn diagnostics, and the cached prop geometry.
 
-### Citation
+### Paper and Citation
 
-If you use EViDS in your research, please acknowledge this repository and consider citing the associated paper:
+If you use EViDS in your research, please cite the following paper.
 
-**Authors:** Lu Xiong, Yiming Zhou, Xuge Hu, Yi Zhang, Haoran Lv, and Chen Tang.
+*EViDS: An Environment–Vehicle Dynamics Integrated Simulation Platform for Intelligent Chassis Development*  
+Lu Xiong, Yiming Zhou, Xuge Hu, Yi Zhang, Haoran Lv, and Chen Tang  
+Accepted at CEVVE2026. The preprint is available on [arXiv](https://arxiv.org/abs/2611.17660) and as a [PDF](https://arxiv.org/pdf/2611.17660).
 
-**Title:** EViDS: An Environment-Vehicle Dynamics Integrated Simulation Platform for Intelligent Chassis Development.
-
-**Conference:** CEVVE2026.
-
-**Status:** Accepted by the conference; not yet formally published.
-
-The full bibliographic citation, including proceedings information, page numbers, and DOI, will be added when available.
-
-**Affiliation:** College of Automotive and Energy Engineering, Tongji University, Shanghai 200092, China.
+```bibtex
+@misc{xiong2026evids,
+  title         = {{EViDS}: An Environment--Vehicle Dynamics Integrated Simulation Platform for Intelligent Chassis Development},
+  author        = {Xiong, Lu and Zhou, Yiming and Hu, Xuge and Zhang, Yi and Lv, Haoran and Tang, Chen},
+  year          = {2026},
+  eprint        = {2611.17660},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2611.17660}
+}
+```
 
 ---
 
@@ -240,16 +249,6 @@ python -m pip install -r requirements.txt
 
 ### 引用
 
-如果您在研究中使用 EViDS，请注明本代码仓库，并考虑引用相关论文：
+### 论文与引用
 
-**作者：** Lu Xiong、Yiming Zhou、Xuge Hu、Yi Zhang、Haoran Lv、Chen Tang。
-
-**论文题目：** EViDS：面向智能底盘开发的环境—车辆动力学一体化仿真平台。
-
-**会议：** CEVVE2026。
-
-**状态：** 已获会议接收，尚未正式发表。
-
-完整的参考文献信息，包括论文集信息、页码和 DOI，将在相关信息确定后补充。
-
-**作者单位：** 中国上海，同济大学汽车与能源学院，邮政编码：200092。
+如果您在研究中使用 EViDS，请引用《EViDS：面向智能底盘开发的环境—车辆动力学一体化仿真平台》。预印本可在 [arXiv](https://arxiv.org/abs/2611.17660) 查看，也可下载 [PDF](https://arxiv.org/pdf/2611.17660)。BibTeX 见[论文引用](#paper-and-citation)。
