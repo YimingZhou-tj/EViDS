@@ -11,7 +11,7 @@ EViDS integrates CARLA environment simulation with CarSim vehicle dynamics throu
 
 CarSim provides the vehicle pose and four-wheel positions. CARLA supplies the virtual environment, and vertical wheel rays return relative ground height (`Z`), friction coefficient (`Mu`), and registered-prop detection flags to Simulink. Height and friction feedback are passed back to CarSim to form the simulation loop.
 
-- ![Town03 double lane change with synchronized CarSim tire-force plots](docs/images/evids-town03-video-plot.gif)
+![Town03 double lane change with synchronized CarSim tire-force plots](docs/images/evids-town03-video-plot.gif)
 
 *Town03 double lane change in CARLA, with synchronized front-wheel vertical loads and lateral forces from CarSim.*
 
